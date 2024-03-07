@@ -12,7 +12,7 @@ if ($this_zip) {
         while (false !== ($image = readdir($folder))) {
             if ($image !== "." && $image != "..") {
                 $file_with_path = "./images/" . $image;
-                $zip->addFile($file_with_path);
+                $zip->addFile($file_with_path, $image);
             }
         }
         closedir($folder);
